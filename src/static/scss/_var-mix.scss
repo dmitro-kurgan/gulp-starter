@@ -1,0 +1,37 @@
+// VARIABLES
+//FONTS
+$font: 'Arial', Arial, sans-serif;
+
+//COLORS
+
+
+//DEVICE WIDTH
+
+// $desctop-lg: "screen and (max-width: 1440px)";
+
+//MIXINS
+
+//PSEUDO
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+//FONTS PROPERTIES
+@mixin font-props ($colour: false, $size: false, $weight: false, $ls: false, $lh: false) {
+	@if $colour { color: $colour; }
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+    @if $ls { letter-spacing: $ls; }
+    @if $lh { line-height: $lh; }
+}
+
+//PLACEHOLDER
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
